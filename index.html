@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+<title>Feliz Dia dos Namorados ❤️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to bottom,#fff0f5,#ffe4e1);
+overflow-x:hidden;
+color:#5b2c35;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+padding:40px 20px;
+text-align:center;
+position:relative;
+}
+
+h1{
+font-family:'Great Vibes',cursive;
+font-size:4rem;
+margin-bottom:20px;
+color:#c94f7c;
+}
+
+.subtitle{
+max-width:700px;
+font-size:1.1rem;
+line-height:1.8;
+margin-bottom:40px;
+}
+
+.photos{
+display:flex;
+flex-wrap:wrap;
+justify-content:center;
+gap:20px;
+margin-bottom:40px;
+}
+
+.photos img{
+width:300px;
+max-width:90vw;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,0.15);
+transition:0.4s;
+}
+
+.photos img:hover{
+transform:scale(1.03);
+}
+
+.counter{
+background:white;
+padding:30px;
+border-radius:30px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-bottom:40px;
+width:90%;
+max-width:800px;
+}
+
+.counter h2{
+margin-bottom:20px;
+font-size:2rem;
+color:#d46a92;
+}
+
+.time{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:25px;
+}
+
+.time div{
+background:#fff0f5;
+padding:20px;
+border-radius:20px;
+min-width:120px;
+}
+
+.time span{
+display:block;
+font-size:2rem;
+font-weight:bold;
+color:#b63b69;
+}
+
+.spotify{
+background:linear-gradient(135deg,#f7b2c4,#d96c93);
+padding:25px;
+border-radius:25px;
+width:90%;
+max-width:700px;
+color:white;
+margin-bottom:50px;
+box-shadow:0 10px 25px rgba(0,0,0,0.1);
+}
+
+.spotify iframe{
+margin-top:20px;
+border-radius:12px;
+}
+
+.math{
+background:white;
+padding:40px;
+border-radius:30px;
+width:90%;
+max-width:800px;
+margin-bottom:50px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+.math h2{
+margin-bottom:20px;
+color:#c94f7c;
+}
+
+.equation{
+font-size:1.3rem;
+margin:20px 0;
+line-height:2;
+}
+
+canvas{
+max-width:100%;
+}
+
+.bible{
+width:90%;
+max-width:900px;
+background:rgba(255,255,255,0.8);
+padding:40px;
+border-radius:30px;
+backdrop-filter:blur(10px);
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+margin-bottom:60px;
+}
+
+.bible h2{
+font-size:2rem;
+margin-bottom:20px;
+color:#c94f7c;
+}
+
+.quote{
+font-size:1.5rem;
+font-style:italic;
+margin-bottom:25px;
+}
+
+footer{
+padding:30px;
+text-align:center;
+color:#8d5a6b;
+}
+
+.flowers{
+position:fixed;
+width:100%;
+height:100%;
+top:0;
+left:0;
+pointer-events:none;
+overflow:hidden;
+z-index:-1;
+}
+
+.flower{
+position:absolute;
+font-size:24px;
+animation:fall linear infinite;
+opacity:0.6;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-100px) rotate(0deg);
+}
+100%{
+transform:translateY(120vh) rotate(360deg);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="flowers"></div>
+
+<section class="hero">
+
+<h1>Feliz Dia dos Namorados ❤️</h1>
+
+<p class="subtitle">
+Entre São José dos Campos e Londres existem mais de 9.400 km,  
+mas nenhuma distância consegue diminuir o que eu sinto por você.
+</p>
+
+<div class="photos">
+<img src="foto1.jpeg" alt="">
+<img src="foto2.jpeg" alt="">
+</div>
+
+<div class="counter">
+
+<h2>Estamos juntos há</h2>
+
+<div class="time">
+
+<div>
+<span id="days">0</span>
+dias
+</div>
+
+<div>
+<span id="hours">0</span>
+horas
+</div>
+
+<div>
+<span id="minutes">0</span>
+minutos
+</div>
+
+<div>
+<span id="seconds">0</span>
+segundos
+</div>
+
+</div>
+
+<p style="margin-top:20px;">
+Desde 18 de março às 16h (horário de Londres)
+</p>
+
+</div>
+
+<div class="spotify">
+
+<h2>🎵 Nossa Música</h2>
+
+<p>
+Obrigado — Leonardo Gonçalves
+</p>
+
+<iframe style="border-radius:12px"
+src="https://open.spotify.com/embed/track/4PTG3Z6ehGkBFwjybzWkR8?utm_source=generator"
+width="100%"
+height="152"
+frameBorder="0"
+allowfullscreen=""
+allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
+loading="lazy">
+</iframe>
+
+</div>
+
+<div class="math">
+
+<h2>Nosso Amor em Forma de Equação</h2>
+
+<div class="equation">
+x² + y² − 1 = x²y³
+</div>
+
+<p>
+Essa equação forma um coração no plano cartesiano.  
+Achei bonito porque parece a forma matemática do que sinto por você.
+</p>
+
+<canvas id="heartCanvas" width="500" height="500"></canvas>
+
+<p class="equation">
+(8.000.000.000 ÷ 2) × 9.400 = 37.600.000.000.000
+</p>
+
+<p>
+37,6 trilhões de motivos pra distância parecer impossível.  
+Mesmo assim, meu amor por você continua maior que qualquer número.
+</p>
+
+</div>
+
+<div class="bible">
+
+<h2>1 João 4:8</h2>
+
+<p class="quote">
+“Quem não ama não conhece a Deus, porque Deus é amor.”
+</p>
+
+<p>
+Talvez o mais bonito sobre nós seja perceber que o amor verdadeiro não nasce apenas do acaso,  
+mas reflete algo maior. Mesmo com oceanos, fusos horários e quilômetros entre nós,  
+Deus continua fazendo o amor encontrar caminhos.
+</p>
+
+<br>
+
+<p>
+Você é uma das minhas maiores respostas de oração.
+</p>
+
+</div>
+
+</section>
+
+<footer>
+Feito com amor, de São José dos Campos para Londres ❤️
+</footer>
+
+<script>
+
+// CONTADOR
+
+const startDate = new Date('2024-03-18T16:00:00+00:00');
+
+function updateCounter(){
+
+const now = new Date();
+
+const diff = now - startDate;
+
+const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+const minutes = Math.floor((diff / (1000 * 60)) % 60);
+const seconds = Math.floor((diff / 1000) % 60);
+
+document.getElementById('days').innerText = days;
+document.getElementById('hours').innerText = hours;
+document.getElementById('minutes').innerText = minutes;
+document.getElementById('seconds').innerText = seconds;
+
+}
+
+setInterval(updateCounter,1000);
+updateCounter();
+
+
+// CORAÇÃO
+
+const canvas = document.getElementById('heartCanvas');
+const ctx = canvas.getContext('2d');
+
+ctx.translate(250,250);
+ctx.scale(15,-15);
+
+ctx.beginPath();
+
+for(let t=0;t<Math.PI*2;t+=0.01){
+
+let x = 16 * Math.pow(Math.sin(t),3);
+let y = 13*Math.cos(t)-5*Math.cos(2*t)-2*Math.cos(3*t)-Math.cos(4*t);
+
+ctx.lineTo(x,y);
+
+}
+
+ctx.strokeStyle="#d94b79";
+ctx.lineWidth=0.15;
+ctx.stroke();
+
+
+// FLORES
+
+const flowers = document.querySelector('.flowers');
+
+for(let i=0;i<25;i++){
+
+const flower = document.createElement('div');
+
+flower.classList.add('flower');
+
+flower.innerHTML = '🌸';
+
+flower.style.left = Math.random()*100 + 'vw';
+flower.style.animationDuration = (5 + Math.random()*10) + 's';
+flower.style.fontSize = (20 + Math.random()*20) + 'px';
+
+flowers.appendChild(flower);
+
+}
+
+</script>
+
+</body>
+</html>
